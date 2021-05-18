@@ -1,3 +1,18 @@
+libfastrpc (8.1.4~peppproxycache-1) stable; urgency=medium
+
+  * improve port formatting
+  * add ServerProxy_t cache for keep-alive connections
+  * #! python8.1.5
+  * version
+  * #! python8.1.4
+  * libfastrpc-dev (>= 8.1.4)
+  * #! python8.1.3
+  * uff, again
+  * #! python8.1.2
+  * fix changelog
+
+ -- Jan Klesnil <jan.klesnil@firma.seznam.cz>  Tue, 18 May 2021 08:54:59 +0100
+
 libfastrpc (8.1.4) stable; urgency=medium
 
   * add useChunks into Config_t

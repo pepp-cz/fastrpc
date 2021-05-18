@@ -455,7 +455,6 @@ static ServerProxyImpl_t* createImpl(const std::string &server, const ServerProx
         }
     }
 
-    printf("ServerProxy_t: created\n");
     return new ServerProxyImpl_t(std::move(url), config);
 }
 
@@ -470,7 +469,6 @@ ServerProxy_t::ServerProxy_t(const std::string &server, const Struct_t &config)
 ServerProxy_t::~ServerProxy_t() {
     // get rid of implementation
     if (sp->getConnector().getKeepAlive()) {
-        printf("~ServerProxy_t: pushing to cache\n");
         ProxyCache_t::instance()->move_into(sp);
     }
 }

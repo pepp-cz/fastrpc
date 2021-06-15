@@ -8,9 +8,11 @@ Vcs-Git: https://github.com/seznam/fastrpc.git
 Vcs-Browser: https://github.com/seznam/fastrpc
 
 
-Package: libfastrpc8
+Package: libfastrpc8-experimental
 Architecture: any
 Section: Seznam
+Conflicts: libfastrpc8
+Provides: libfastrpc8 ( = 8.1.4)
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Fastrpc - RPC library, supports binary and XML encoding
  Fastrpc is a powerful and easy to make distributed applications.
@@ -18,7 +20,7 @@ Description: Fastrpc - RPC library, supports binary and XML encoding
 Package: libfastrpc-dev
 Architecture: any
 Section: Seznam
-Depends: libfastrpc8 (= ${binary:Version}), ${misc:Depends}, libxml2-dev
+Depends: libfastrpc8-experimental (= ${binary:Version}), ${misc:Depends}, libxml2-dev
 Description: Development files for fastrpc library
  Here are files necessary for developing new applications
  that use fastrpc library and its C/C++ interface.
@@ -26,5 +28,5 @@ Description: Development files for fastrpc library
 Package: libfastrpc8-dbg
 Architecture: any
 Section: Seznam
-Depends: libfastrpc8 (= ${binary:Version}), ${misc:Depends}
+Depends: libfastrpc8-experimental (= ${binary:Version}), ${misc:Depends}
 Description: Debug symbols for fastrpc library.
